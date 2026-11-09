@@ -59,11 +59,12 @@ body:has(#privacy:target) #home{display:none}
 .rule{border-top:1px solid var(--rule)}
 .sand{background:var(--sand)}
 
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px}
-.steps li{display:flex;flex-direction:column;gap:10px;border-top:2px solid var(--ink);padding-top:20px}
-.step-num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--green)}
-.steps h3{font-weight:500;font-size:26px;line-height:1.2}
-.steps p{font-size:17px;line-height:1.55;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px}
+.steps h3{display:flex;align-items:baseline;gap:16px;font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.2}
+.step-num{flex:none;min-width:.6em;color:var(--green)}
+@media (min-width:880px){
+  .steps{flex-direction:row;justify-content:space-between;gap:40px}
+}
 
 .features{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px 48px}
 .features li{display:flex;gap:16px}
