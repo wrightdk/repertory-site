@@ -97,32 +97,10 @@
 
   <main id="privacy" class="prose" tabindex="-1">
     <a class="back" href="#"><span class="icon" aria-hidden="true">arrow_back</span>Back to Repertory</a>
-    <h1>Privacy</h1>
-    <p class="updated">Last updated: 7 November 2026</p>
-    <p>Repertory is a free, open-source Android app for working through the filmographies of people from film. This page explains what it does with your data. The short version: it collects nothing.</p>
-    <h2>What we collect</h2>
-    <p>Nothing. There is no server run by the developer, no account to create, and no way for the developer to see anything you do in the app.</p>
-    <p>The app has no analytics, no advertising, no crash reporting and no tracking of any kind. It doesn't use Google Play Services, Firebase or any other third-party SDK that gathers data.</p>
-    <h2>What stays on your phone</h2>
-    <p>The people you track, the films you've ticked as seen, the dates you've given them, your filter choices and your settings are all stored on your phone and nowhere else. Removing the app removes this data, unless you've made a backup (see below).</p>
-    <h2>What the app sends over the internet</h2>
-    <p>The app contacts one service: <a href="https://www.themoviedb.org">TMDB</a> (The Movie Database). It uses TMDB to search for people and to fetch their filmographies, film details, posters and photos, and "Where to watch" information. Posters and photos are loaded from TMDB's image servers.</p>
-    <p>What TMDB can see is what any website or app can see when it makes a request: your IP address, and the search terms or the person and film IDs the app asks for. The app doesn't send TMDB your list, your ticks, your settings or any identifier of yours. It doesn't send your country either. For "Where to watch", TMDB returns data for every country and the app picks out yours on the phone.</p>
-    <p>TMDB has its own privacy policy, which applies to those requests: <a href="https://www.themoviedb.org/privacy-policy">https://www.themoviedb.org/privacy-policy</a>. "Where to watch" data comes from JustWatch via TMDB. The app doesn't contact JustWatch itself. The JustWatch logo is bundled in the app, and the attribution link only opens JustWatch's website if you tap it.</p>
-    <p>The app also won't contact anyone else. The "Source code" and attribution links open in your browser only when you tap them.</p>
-    <h2>Your own TMDB API key</h2>
-    <p>In Settings you can enter your own TMDB API key. If you do, it's stored on your phone and used in place of the app's built-in key when talking to TMDB. It isn't sent anywhere else, it isn't included in the backup file described below, and it's excluded from Android's automatic backup.</p>
-    <h2>Backing up and restoring your data</h2>
-    <p>Settings lets you export your data to a JSON file and restore it from one. You choose where the file is saved and where it's restored from, using Android's file picker. The app doesn't upload it. What happens to the file after that is up to you.</p>
-    <p>The file contains your tracked lists, ticked films and dates, filter settings, theme, home sort order and chosen country. It doesn't contain your API key.</p>
-    <h2>Android's own backup</h2>
-    <p>The app allows Android's standard backup, so if you have device backup switched on (for example Google's backup to your Google account) or you move to a new phone with Android's transfer tool, your list and ticks can be included. That backup is handled by Android and your backup provider under their own privacy terms. The developer has no access to it. You can turn it off in your phone's system settings. Your own API key is excluded from it.</p>
-    <h2>Children</h2>
-    <p>The app doesn't collect personal information from anyone, including children.</p>
-    <h2>Changes</h2>
-    <p>If this policy changes, the new version will be committed to the project's repository with an updated date at the top. The full history is in the repository.</p>
-    <h2>Contact</h2>
-    <p>Questions can go in an issue at <a href="https://github.com/wrightdk/Repertory/issues">https://github.com/wrightdk/Repertory/issues</a>.</p>
+    <div id="policy">
+      <h1>Privacy policy</h1>
+      <p>Loading… If this doesn't appear, <a href="PRIVACY.md">read the policy as plain text</a>.</p>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -137,7 +115,18 @@
     <p class="attribution">This product uses the <a href="https://www.themoviedb.org">TMDB</a> API but is not endorsed or certified by TMDB. Streaming availability from JustWatch, via TMDB.</p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
   <script>
+    // The privacy policy is PRIVACY.md in this repo; edit that file and the page follows.
+    fetch('PRIVACY.md', { cache: 'no-cache' })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(md => {
+        const policy = document.getElementById('policy');
+        policy.innerHTML = marked.parse(md);
+        policy.querySelectorAll('a[href^="http"]').forEach(a => a.rel = 'noopener');
+      })
+      .catch(() => {});
+
     // Switching between the home and privacy views should start at the top of the page.
     function showView() {
       window.scrollTo(0, 0);

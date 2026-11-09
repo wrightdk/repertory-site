@@ -96,7 +96,12 @@ body:has(#privacy:target) #home{display:none}
 .back{display:inline-flex;align-items:center;gap:6px;font-size:16px;font-weight:500;text-decoration:none;margin-bottom:32px;min-height:44px}
 .back .icon{font-size:20px}
 .prose h1{font-size:clamp(48px,7vw,80px);line-height:1;margin-bottom:24px}
-.prose .updated{font-size:15px;color:var(--muted);margin-bottom:32px}
+.prose h1 + p{font-size:15px;color:var(--muted);margin-bottom:32px}
 .prose h2{font-size:26px;font-weight:500;line-height:1.25;border-top:1px solid var(--rule);padding-top:28px;margin:40px 0 12px}
 .prose p{margin:0 0 16px}
 .prose a{overflow-wrap:anywhere}
+.prose h3{font-size:21px;font-weight:500;margin:28px 0 8px}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:1.3em}
+.prose li{margin-bottom:6px}
+.prose code{font-size:.9em;background:var(--sand);padding:.1em .35em;border-radius:4px}
+.prose blockquote{margin:0 0 16px;padding-left:16px;border-left:3px solid var(--rule);color:var(--muted)}
