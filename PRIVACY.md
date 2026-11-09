@@ -1,6 +1,6 @@
 # Privacy policy
 
-Last updated: 7 November 2026
+Last updated: 9 November 2026
 
 Repertory is a free, open-source Android app for working through the filmographies of people from film. This page explains what it does with your data. The short version: it collects nothing.
 
@@ -48,4 +48,4 @@ If this policy changes, the new version will be committed to the project's repos
 
 ## Contact
 
-Questions can go in an issue at <https://github.com/wrightdk/Repertory/issues>.
+Questions can go to <developer.theatrics480@passinbox.com>.
