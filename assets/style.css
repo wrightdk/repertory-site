@@ -1,0 +1,102 @@
+:root{
+  --cream:#F7F4EF;--sand:#ECE5D9;--ink:#1C1915;--ink-2:#3D3731;--muted:#5E574E;--rule:#D9D1C4;
+  --green:#2E6B52;--green-dark:#1F4D3A;--mint:#CFE8DA;--footer-text:#F1ECE4;--footer-muted:#B5ACA0;
+  --serif:"Source Serif 4",Georgia,serif;--sans:"IBM Plex Sans",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
+img{display:block;max-width:100%}
+a{color:var(--green)}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.icon{font-family:"Material Symbols Outlined";font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;white-space:nowrap;font-feature-settings:"liga";-webkit-font-smoothing:antialiased}
+
+/* Views: the privacy policy is shown when the URL hash is #privacy */
+#privacy{display:none}
+#privacy:target{display:block}
+body:has(#privacy:target) #home{display:none}
+
+/* Header */
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px var(--pad)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
+.brand:hover{color:var(--ink)}
+.brand-mark{width:36px;height:36px;border-radius:9px;background:var(--green);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:500}
+.brand-mark span{color:var(--mint)}
+.brand-name{font-family:var(--serif);font-size:24px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;text-decoration:none;font-weight:500;min-height:44px}
+.btn-primary{background:var(--green);color:var(--cream);padding:16px 28px;font-size:17px}
+.btn-primary:hover{background:var(--green-dark);color:var(--cream)}
+.btn-outline{border:1.5px solid var(--ink);color:var(--ink);padding:9px 18px;font-size:15px;white-space:nowrap}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.btn .icon{font-size:22px}
+.btn[aria-disabled="true"]{cursor:default}
+.btn-primary[aria-disabled="true"]:hover{background:var(--green)}
+.btn-outline[aria-disabled="true"]:hover{background:none;color:var(--ink)}
+
+/* Hero */
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(40px,6vw,96px);padding:clamp(32px,6vw,96px) var(--pad) clamp(56px,7vw,112px)}
+.hero-text{flex:1 1 420px;display:flex;flex-direction:column;gap:28px;max-width:640px}
+.hero h1{font-size:clamp(60px,10vw,136px);line-height:.95;letter-spacing:-.02em}
+.pitch{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.35;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.hero-phone{flex:0 1 320px;display:flex;justify-content:center;margin:0 auto}
+.hero-phone .phone{width:clamp(240px,26vw,320px);box-shadow:0 40px 80px -30px rgba(28,25,21,.45)}
+
+/* Phone frame */
+.phone{background:var(--ink);padding:7px;border-radius:36px}
+.phone img{width:100%;height:auto;aspect-ratio:1080/2424;border-radius:29px}
+
+/* Sections */
+.section{padding:clamp(56px,7vw,104px) var(--pad);display:flex;flex-direction:column;gap:48px}
+.section h2{font-size:clamp(36px,4.4vw,56px);line-height:1.05}
+.rule{border-top:1px solid var(--rule)}
+.sand{background:var(--sand)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px}
+.steps li{display:flex;flex-direction:column;gap:10px;border-top:2px solid var(--ink);padding-top:20px}
+.step-num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--green)}
+.steps h3{font-weight:500;font-size:26px;line-height:1.2}
+.steps p{font-size:17px;line-height:1.55;color:var(--muted)}
+
+.features{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px 48px}
+.features li{display:flex;gap:16px}
+.features .icon{flex:none;width:44px;height:44px;border-radius:50%;background:var(--mint);color:var(--green-dark);display:flex;align-items:center;justify-content:center;font-size:22px}
+.features li>div{display:flex;flex-direction:column;gap:4px}
+.features h3{font-family:var(--sans);font-size:18px;font-weight:600}
+.features p{font-size:16px;line-height:1.55;color:var(--muted)}
+
+.shots-section{padding-left:0;padding-right:0}
+.shots-section h2{padding:0 var(--pad)}
+.shots{display:flex;gap:clamp(20px,4vw,56px);overflow-x:auto;padding:8px var(--pad) 24px;justify-content:safe center;scroll-snap-type:x mandatory;scroll-padding:0 var(--pad)}
+.shots figure{margin:0;flex:0 0 clamp(220px,24vw,300px);display:flex;flex-direction:column;gap:16px;scroll-snap-align:start}
+.shots .phone{padding:6px;border-radius:32px}
+.shots .phone img{border-radius:26px}
+.shots figcaption{font-size:16px;color:var(--muted)}
+
+/* Footer */
+.site-footer{background:var(--ink);color:var(--footer-text);padding:48px var(--pad);display:flex;flex-direction:column;gap:32px}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:24px}
+.footer-top p{font-family:var(--serif);font-size:26px}
+.footer-links{display:flex;flex-wrap:wrap;gap:24px;font-size:16px}
+.footer-links a{color:var(--footer-text)}
+.footer-links a:hover{color:var(--mint)}
+.attribution{font-size:14px;line-height:1.6;color:var(--footer-muted);max-width:640px}
+.attribution a{color:inherit}
+.attribution a:hover{color:var(--footer-text)}
+
+/* Privacy */
+.prose{max-width:720px;margin:0 auto;padding:clamp(32px,6vw,80px) var(--pad) clamp(64px,8vw,120px)}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:16px;font-weight:500;text-decoration:none;margin-bottom:32px;min-height:44px}
+.back .icon{font-size:20px}
+.prose h1{font-size:clamp(48px,7vw,80px);line-height:1;margin-bottom:24px}
+.prose .updated{font-size:15px;color:var(--muted);margin-bottom:32px}
+.prose h2{font-size:26px;font-weight:500;line-height:1.25;border-top:1px solid var(--rule);padding-top:28px;margin:40px 0 12px}
+.prose p{margin:0 0 16px}
+.prose a{overflow-wrap:anywhere}

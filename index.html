@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repertory: work through filmographies</title>
+  <meta name="description" content="A free Android app for following directors and actors and working through their films one by one.">
+  <meta name="theme-color" content="#F7F4EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Repertory">
+  <meta property="og:description" content="Follow the directors and actors you care about, and work through their films one by one.">
+  <meta property="og:image" content="https://wrightdk.github.io/repertory-site/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0&icon_names=arrow_back,dark_mode,donut_large,download,event,live_tv,person_add,tune&display=block">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Repertory home">
+      <span class="brand-mark" aria-hidden="true">R<span>.</span></span>
+      <span class="brand-name">Repertory</span>
+    </a>
+    <!--
+      DOWNLOAD LINK (1 of 2). When the app is out, swap this for:
+        <a class="btn btn-outline" href="STORE_URL">Download</a>
+    -->
+    <a class="btn btn-outline" role="link" aria-disabled="true">Coming soon</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Repertory</h1>
+        <p class="pitch">Follow the directors and actors you care about, and work through their films one by one.</p>
+        <div class="cta">
+          <!--
+            DOWNLOAD LINK (2 of 2). When the app is out, add href and change the label:
+              Play Store: https://play.google.com/store/apps/details?id=io.github.wrightdk.repertory   "Get it on Google Play"
+              F-Droid:    https://f-droid.org/packages/io.github.wrightdk.repertory/                   "Get it on F-Droid"
+              APK:        https://github.com/wrightdk/Repertory/releases/latest                        "Download the APK"
+            and remove role/aria-disabled.
+          -->
+          <a class="btn btn-primary" role="link" aria-disabled="true"><span class="icon" aria-hidden="true">download</span>Coming soon</a>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <div class="phone"><img src="assets/screen-list.png" width="720" height="1616" alt="Your list screen showing Wes Anderson, Timothée Chalamet, Stanley Kubrick and Zendaya, each with a progress bar of films seen"></div>
+      </div>
+    </section>
+
+    <section class="section rule" aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Pick a person</h3>
+          <p>Search for a director or actor and add them to your list.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>See their filmography</h3>
+          <p>Every film in release order, grouped by decade.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Tick off what you've seen</h3>
+          <p>Your progress updates as you go, so you always know what's left.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section sand" aria-labelledby="features">
+      <h2 id="features">Features</h2>
+      <ul class="features">
+        <li><span class="icon" aria-hidden="true">person_add</span><div><h3>Directors and actors</h3><p>Follow anyone with a film credit. Kept up to date.</p></div></li>
+        <li><span class="icon" aria-hidden="true">donut_large</span><div><h3>Progress at a glance</h3><p>See how far through each filmography you are.</p></div></li>
+        <li><span class="icon" aria-hidden="true">tune</span><div><h3>Count what counts</h3><p>Choose to show or hide shorts, TV, cameos and minor roles.</p></div></li>
+        <li><span class="icon" aria-hidden="true">live_tv</span><div><h3>Where to watch</h3><p>Streaming options for your country.</p></div></li>
+        <li><span class="icon" aria-hidden="true">event</span><div><h3>Upcoming releases</h3><p>Unreleased films and their due dates.</p></div></li>
+        <li><span class="icon" aria-hidden="true">dark_mode</span><div><h3>Light and dark</h3><p>A dark theme for late screenings.</p></div></li>
+      </ul>
+    </section>
+
+    <section class="section shots-section" aria-labelledby="preview">
+      <h2 id="preview">Preview</h2>
+      <div class="shots" tabindex="0" role="region" aria-label="App screenshots">
+        <figure><div class="phone"><img src="assets/screen-filmography.png" width="720" height="1616" loading="lazy" alt="Stanley Kubrick's filmography: 5 of 13 seen, with his 1950s films listed by year"></div><figcaption>Every film, in order</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screen-film.png" width="720" height="1616" loading="lazy" alt="Film page for Tillie's Punctured Romance, 1914, with a Mark as seen button and streaming options"></div><figcaption>Find where to watch</figcaption></figure>
+        <figure><div class="phone"><img src="assets/screen-upcoming.png" width="720" height="1616" loading="lazy" alt="Zendaya's films, including unreleased titles with due dates"></div><figcaption>Know what's coming</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <main id="privacy" class="prose" tabindex="-1">
+    <a class="back" href="#"><span class="icon" aria-hidden="true">arrow_back</span>Back to Repertory</a>
+    <h1>Privacy</h1>
+    <p class="updated">Last updated: 7 November 2026</p>
+    <p>Repertory is a free, open-source Android app for working through the filmographies of people from film. This page explains what it does with your data. The short version: it collects nothing.</p>
+    <h2>What we collect</h2>
+    <p>Nothing. There is no server run by the developer, no account to create, and no way for the developer to see anything you do in the app.</p>
+    <p>The app has no analytics, no advertising, no crash reporting and no tracking of any kind. It doesn't use Google Play Services, Firebase or any other third-party SDK that gathers data.</p>
+    <h2>What stays on your phone</h2>
+    <p>The people you track, the films you've ticked as seen, the dates you've given them, your filter choices and your settings are all stored on your phone and nowhere else. Removing the app removes this data, unless you've made a backup (see below).</p>
+    <h2>What the app sends over the internet</h2>
+    <p>The app contacts one service: <a href="https://www.themoviedb.org">TMDB</a> (The Movie Database). It uses TMDB to search for people and to fetch their filmographies, film details, posters and photos, and "Where to watch" information. Posters and photos are loaded from TMDB's image servers.</p>
+    <p>What TMDB can see is what any website or app can see when it makes a request: your IP address, and the search terms or the person and film IDs the app asks for. The app doesn't send TMDB your list, your ticks, your settings or any identifier of yours. It doesn't send your country either. For "Where to watch", TMDB returns data for every country and the app picks out yours on the phone.</p>
+    <p>TMDB has its own privacy policy, which applies to those requests: <a href="https://www.themoviedb.org/privacy-policy">https://www.themoviedb.org/privacy-policy</a>. "Where to watch" data comes from JustWatch via TMDB. The app doesn't contact JustWatch itself. The JustWatch logo is bundled in the app, and the attribution link only opens JustWatch's website if you tap it.</p>
+    <p>The app also won't contact anyone else. The "Source code" and attribution links open in your browser only when you tap them.</p>
+    <h2>Your own TMDB API key</h2>
+    <p>In Settings you can enter your own TMDB API key. If you do, it's stored on your phone and used in place of the app's built-in key when talking to TMDB. It isn't sent anywhere else, it isn't included in the backup file described below, and it's excluded from Android's automatic backup.</p>
+    <h2>Backing up and restoring your data</h2>
+    <p>Settings lets you export your data to a JSON file and restore it from one. You choose where the file is saved and where it's restored from, using Android's file picker. The app doesn't upload it. What happens to the file after that is up to you.</p>
+    <p>The file contains your tracked lists, ticked films and dates, filter settings, theme, home sort order and chosen country. It doesn't contain your API key.</p>
+    <h2>Android's own backup</h2>
+    <p>The app allows Android's standard backup, so if you have device backup switched on (for example Google's backup to your Google account) or you move to a new phone with Android's transfer tool, your list and ticks can be included. That backup is handled by Android and your backup provider under their own privacy terms. The developer has no access to it. You can turn it off in your phone's system settings. Your own API key is excluded from it.</p>
+    <h2>Children</h2>
+    <p>The app doesn't collect personal information from anyone, including children.</p>
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be committed to the project's repository with an updated date at the top. The full history is in the repository.</p>
+    <h2>Contact</h2>
+    <p>Questions can go in an issue at <a href="https://github.com/wrightdk/Repertory/issues">https://github.com/wrightdk/Repertory/issues</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <p>Repertory is free to use.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#privacy">Privacy</a>
+        <a href="https://github.com/wrightdk/Repertory">Source code</a>
+        <a href="https://github.com/wrightdk/Repertory/issues">Contact</a>
+      </nav>
+    </div>
+    <p class="attribution">This product uses the <a href="https://www.themoviedb.org">TMDB</a> API but is not endorsed or certified by TMDB. Streaming availability from JustWatch, via TMDB.</p>
+  </footer>
+
+  <script>
+    // Switching between the home and privacy views should start at the top of the page.
+    function showView() {
+      window.scrollTo(0, 0);
+      document.title = location.hash === '#privacy' ? 'Privacy | Repertory' : 'Repertory: work through filmographies';
+      if (location.hash === '#privacy') document.getElementById('privacy').focus({ preventScroll: true });
+    }
+    addEventListener('hashchange', showView);
+    if (location.hash === '#privacy') showView();
+  </script>
+</body>
+</html>
